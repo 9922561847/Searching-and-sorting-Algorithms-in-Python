@@ -6,7 +6,8 @@ Date: 02 July 2021
 position = -1 #created global variable position
 def search(list,n):
     i = 0
-    while i < len(list):
+    #while i < len(list):
+    for i in range(len(list)):
         if list[i] == n:
             globals()['position'] = i
             return True
@@ -14,7 +15,7 @@ def search(list,n):
     return False
 list = [5,8,4,6,9,2]
 
-n = 9
+n = 5
 if search(list, n):
     print("found at positions : ", position)
 else:
